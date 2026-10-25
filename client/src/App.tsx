@@ -30,7 +30,7 @@ export default function App() {
       <main>
         {tab === "today" ? (
           <DayView
-            target={target}
+            target={target ?? 0}
             entries={entries}
             onAdd={(entry) => setEntries([...entries, entry])}
             onDelete={(id) => setEntries(entries.filter((e) => e.id !== id))}
